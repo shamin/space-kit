@@ -1,12 +1,12 @@
 {
-  "name": "@space-kit/core",
-  "version": "0.1.0-alpha.1",
+  "name": "@space-kit/docs",
+  "private": true,
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\""
   },
   "keywords": [],
-  "author": "",
+  "author": "Shamin",
   "license": "MIT",
   "repository": {
     "type": "git",
