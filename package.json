@@ -1,12 +1,20 @@
 {
   "name": "@space-kit/core",
   "version": "0.1.0-alpha.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\""
   },
   "keywords": [],
   "author": "",
-  "license": "MIT"
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shamin/react-space.git"
+  },
+  "bugs": {
+    "url": "https://github.com/shamin/react-space/issues"
+  },
+  "homepage": "https://github.com/shamin/react-space#readme",
+  "description": ""
 }
