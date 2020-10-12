@@ -1,20 +1,11 @@
 {
-  "name": "@space-kit/core",
-  "version": "0.1.0-alpha.1",
-  "main": "index.js",
+  "name": "space-kit",
+  "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\""
+    "bootstrap": "lerna bootstrap",
+    "lerna:publish": "lerna publish from-package --yes"
   },
-  "keywords": [],
-  "author": "",
-  "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/shamin/react-space.git"
-  },
-  "bugs": {
-    "url": "https://github.com/shamin/react-space/issues"
-  },
-  "homepage": "https://github.com/shamin/react-space#readme",
-  "description": ""
+  "devDependencies": {
+    "lerna": "^3.22.1"
+  }
 }

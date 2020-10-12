@@ -1,0 +1,23 @@
+{
+  "name": "@space-kit/core",
+  "version": "0.1.0-alpha.1",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shamin/space-kit.git"
+  },
+  "bugs": {
+    "url": "https://github.com/shamin/space-kit/issues"
+  },
+  "homepage": "https://github.com/shamin/space-kit#readme",
+  "description": "",
+  "devDependencies": {
+    "lerna": "^3.22.1"
+  }
+}
