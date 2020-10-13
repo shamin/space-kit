@@ -30,5 +30,10 @@
     "@emotion/core": "^10.0.35",
     "react": "^16.13.1"
   },
-  "files": ["dist/**/*"]
+  "files": [
+    "dist/**/*"
+  ],
+  "publishConfig": {
+    "access": "public"
+  }
 }
