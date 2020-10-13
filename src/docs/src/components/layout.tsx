@@ -29,8 +29,4 @@ const Layout: FunctionComponent = ({ children }) => {
   )
 }
 
-Layout.propTypes = {
-  children: PropTypes.node.isRequired,
-}
-
 export default Layout

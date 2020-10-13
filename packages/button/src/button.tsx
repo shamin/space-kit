@@ -1,3 +1,4 @@
+import React from 'react'
 /** @jsx jsx */
 import { css, jsx } from "@emotion/core";
 import { FunctionComponent, ReactNode } from "react";
@@ -11,7 +12,7 @@ interface ButtonProps {
   children: ReactNode;
 }
 
-export const Button: FunctionComponent<ButtonProps> = (props) => (
+export const Button: FunctionComponent<ButtonProps> = (props: ButtonProps) => (
   <button css={buttonStyle} onClick={props.onClick}>
     {props.children}
   </button>
