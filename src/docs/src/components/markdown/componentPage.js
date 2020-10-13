@@ -6,7 +6,9 @@ export default class ComponentPage extends Component {
   render() {
     return (
       <Layout>
-        <MDXStyler>{this.props.children}</MDXStyler>
+        <div className="markdown">
+          <MDXStyler>{this.props.children}</MDXStyler>
+        </div>
       </Layout>
     )
   }

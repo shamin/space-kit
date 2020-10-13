@@ -8,7 +8,6 @@ const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
     <p>Another react component library</p>
-    <Link to="/components/button/">Button</Link>
   </Layout>
 )
 

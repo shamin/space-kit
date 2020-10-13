@@ -2,10 +2,31 @@
 path: "/components/button/"
 title: "Button"
 ---
-
 ## Button
+
+---
+
 <button>Hello Button</button>
 
-```jsx
-<Button>Hello Button</Button>
+
+### Usage
+Install button component from npm
+```bash
+npm install --save @space-kit/button
 ```
+
+Add button component to your file
+
+```jsx
+import React from 'react'
+import { PrimaryButton } from '@space-kit/button'
+
+const MyComponent = () => {
+  return (
+    <PrimaryButton>Hello Button</PrimaryButton>
+  )
+}
+
+```
+
+### Props Table

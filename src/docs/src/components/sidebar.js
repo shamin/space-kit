@@ -22,7 +22,7 @@ const Sidebar = ({ siteTitle }) => {
   return (
     <div className="sidebar">
       <div>
-        <h1>
+        <h1 className="logo">
           <Link
             to="/"
             style={{
@@ -33,7 +33,7 @@ const Sidebar = ({ siteTitle }) => {
           </Link>
         </h1>
       </div>
-      <div>
+      <nav>
         <ul>
           {data.allMdx.edges.map(edge => (
             <li key={edge.node.id}>
@@ -43,7 +43,7 @@ const Sidebar = ({ siteTitle }) => {
             </li>
           ))}
         </ul>
-      </div>
+      </nav>
     </div>
   )
 }

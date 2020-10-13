@@ -1,6 +1,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 import Highlight, { defaultProps } from "prism-react-renderer"
+import github from 'prism-react-renderer/themes/github';
 
 export default class SyntaxHighlighter extends React.PureComponent {
   static propTypes = {
@@ -13,6 +14,7 @@ export default class SyntaxHighlighter extends React.PureComponent {
         {...defaultProps}
         code={this.props.children.trim()}
         language="jsx"
+        theme={github}
       >
         {({ className, style, tokens, getLineProps, getTokenProps }) => (
           <div className={`${className} syntax-highlight`} style={style}>
