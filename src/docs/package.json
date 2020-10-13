@@ -1,7 +1,7 @@
 {
   "name": "@space-kit/docs",
   "private": true,
-  "description": "Space kit documentation",
+  "description": "Space-kit documentation",
   "version": "0.0.1",
   "author": "Shamin",
   "dependencies": {
