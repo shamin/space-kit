@@ -1,12 +1,11 @@
-import React from "react"
-import PropTypes from "prop-types"
+import React, { FunctionComponent } from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import "./layout.css"
 
 import Sidebar from "./sidebar"
 import Header from "./header"
 
-const Layout = ({ children }) => {
+const Layout: FunctionComponent = ({ children }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {

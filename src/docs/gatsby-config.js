@@ -24,7 +24,7 @@ module.exports = {
       resolve: `gatsby-plugin-mdx`,
       options: {
         defaultLayouts: {
-          default: require.resolve("./src/components/markdown/componentPage.js"),
+          default: require.resolve("./src/components/markdown/componentPage.tsx"),
         },
       },
     },
@@ -39,7 +39,7 @@ module.exports = {
         background_color: `#FFF`,
         theme_color: `#1070CA`,
         display: `space-kit`,
-        icon: `src/images/gatsby-icon.png`,
+        icon: `src/images/icon.png`,
       },
     },
   ],

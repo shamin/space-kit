@@ -1,8 +1,11 @@
+import React, { FunctionComponent } from "react"
 import { graphql, Link, useStaticQuery } from "gatsby"
-import PropTypes from "prop-types"
-import React from "react"
 
-const Sidebar = ({ siteTitle }) => {
+interface SidebarTypes {
+  siteTitle: string
+}
+
+const Sidebar: FunctionComponent<SidebarTypes> = ({ siteTitle }) => {
   const data = useStaticQuery(graphql`
     query {
       allMdx {
@@ -46,14 +49,6 @@ const Sidebar = ({ siteTitle }) => {
       </nav>
     </div>
   )
-}
-
-Sidebar.propTypes = {
-  siteTitle: PropTypes.string,
-}
-
-Sidebar.defaultProps = {
-  siteTitle: ``,
 }
 
 export default Sidebar
