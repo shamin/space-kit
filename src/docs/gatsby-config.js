@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `Space Kit`,
-    description: `Another react component library.`,
+    description: `Yet another react component library.`,
     author: `@shamin`,
   },
   plugins: [
