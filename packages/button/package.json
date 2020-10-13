@@ -1,0 +1,39 @@
+{
+  "name": "@space-kit/button",
+  "version": "0.1.0-alpha.1",
+  "description": "Spacekit button component",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "types": "dist/cjs/index.d.ts",
+  "scripts": {
+    "build:cjs": "tsc --module commonjs --outDir dist/cjs",
+    "build:esm": "tsc --module esnext --outDir dist/esm",
+    "build": "npm run build:cjs && npm run build:esm"
+  },
+  "keywords": [],
+  "author": "Shamin",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shamin/space-kit.git"
+  },
+  "bugs": {
+    "url": "https://github.com/shamin/space-kit/issues"
+  },
+  "homepage": "https://github.com/shamin/space-kit#readme",
+  "devDependencies": {
+    "@types/react": "^16.9.52",
+    "lerna": "^3.22.1",
+    "typescript": "^4.0.3"
+  },
+  "dependencies": {
+    "@emotion/core": "^10.0.35",
+    "react": "^16.13.1"
+  },
+  "files": [
+    "dist/**/*"
+  ],
+  "publishConfig": {
+    "access": "public"
+  }
+}
