@@ -5,6 +5,19 @@ module.exports = {
     author: `@shamin`,
   },
   plugins: [
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `packages`,
+        path: `../../packages`,
+      },
+    },
+    {
+      resolve: "gatsby-transformer-react-docgen",
+      options: {
+        babelrcRoots: ["../../packages/*"],
+      },
+    },
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,

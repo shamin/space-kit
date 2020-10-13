@@ -8,5 +8,6 @@
     "jsx": "react",
     "sourceMap": true,
     "moduleResolution": "Node",
+    "allowSyntheticDefaultImports": true
   },
 }

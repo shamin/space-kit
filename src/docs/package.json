@@ -16,6 +16,7 @@
     "gatsby-plugin-react-helmet": "^3.3.12",
     "gatsby-plugin-sharp": "^2.6.38",
     "gatsby-source-filesystem": "^2.3.32",
+    "gatsby-transformer-react-docgen": "^5.2.14",
     "gatsby-transformer-remark": "^2.8.38",
     "gatsby-transformer-sharp": "^2.5.16",
     "prism-react-renderer": "^1.1.1",
