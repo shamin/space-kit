@@ -1,0 +1,28 @@
+body {
+  padding: 0;
+  margin: 0;
+  background: linear-gradient(90deg, #fafbfd 50%, #fff 50%);
+}
+
+.container {
+  max-width: 1240px;
+  margin: 0 auto;
+}
+
+.content-grid {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+}
+
+.sidebar {
+  width: 240px;
+}
+
+.content-main {
+  background: #fff;
+  min-height: 100vh;
+}
+
+.content-main main {
+  padding: 30px;
+}
