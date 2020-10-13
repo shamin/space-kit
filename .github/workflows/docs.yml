@@ -14,6 +14,7 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: 12
+      - run: npm ci
       - run: npm run bootstrap
       - run: cd src/docs
       - run: npm run deploy space-kit.surge.sh -- --token ${{ secrets.SURGE_TOKEN }} 
