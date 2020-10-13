@@ -16,4 +16,4 @@ jobs:
           node-version: 12
       - run: npm run bootstrap
       - run: cd src/docs
-      - run: npm run deploy space-kit.surge.sh --token ${{ secrets.SURGE_TOKEN }} 
+      - run: npm run deploy space-kit.surge.sh -- --token ${{ secrets.SURGE_TOKEN }} 
