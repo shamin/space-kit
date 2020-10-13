@@ -2,13 +2,33 @@
 path: "/components/button/"
 title: "Button"
 ---
+
 import Button from "@space-kit/button"
+import { graphql } from "gatsby"
+
+export const query = graphql`
+  query {
+    allComponentMetadata(filter: { displayName: { eq: "Button" } }) {
+      edges {
+        node {
+          id
+          displayName
+          props {
+            id
+            name
+            tsType
+          }
+        }
+      }
+    }
+  }
+`
 
 ## Button
 
 ---
 
-<Button>Hello</Button>
+<Button>Hello Button</Button>
 
 ### Installation
 
@@ -32,3 +52,22 @@ const MyComponent = () => {
 ```
 
 ### Props Table
+
+<table>
+  <thead>
+    <tr>
+      <th>Props</th>
+      <th>Type</th>
+    </tr>
+  </thead>
+  <tbody>
+    {props.data.allComponentMetadata.edges[0].node.props.map(
+      ({ name, tsType }) => (
+        <tr>
+          <td>{name}</td>
+          <td>{tsType.type || tsType.name}</td>
+        </tr>
+      )
+    )}
+  </tbody>
+</table>
