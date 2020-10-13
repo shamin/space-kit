@@ -1,11 +1,11 @@
-import React, { FunctionComponent } from "react"
-import { graphql, Link, useStaticQuery } from "gatsby"
+import React, { FunctionComponent } from 'react';
+import { graphql, Link, useStaticQuery } from 'gatsby';
 
 interface SidebarTypes {
-  siteTitle: string
+  siteTitle: string;
 }
 
-const Sidebar: FunctionComponent<SidebarTypes> = ({ siteTitle }) => {
+const Sidebar: FunctionComponent<SidebarTypes> = ({ siteTitle }: SidebarTypes) => {
   const data = useStaticQuery(graphql`
     query {
       allMdx {
@@ -20,7 +20,7 @@ const Sidebar: FunctionComponent<SidebarTypes> = ({ siteTitle }) => {
         }
       }
     }
-  `)
+  `);
 
   return (
     <div className="sidebar">
@@ -29,7 +29,7 @@ const Sidebar: FunctionComponent<SidebarTypes> = ({ siteTitle }) => {
           <Link
             to="/"
             style={{
-              textDecoration: `none`,
+              textDecoration: 'none',
             }}
           >
             {siteTitle}
@@ -38,7 +38,7 @@ const Sidebar: FunctionComponent<SidebarTypes> = ({ siteTitle }) => {
       </div>
       <nav>
         <ul>
-          {data.allMdx.edges.map(edge => (
+          {data.allMdx.edges.map((edge) => (
             <li key={edge.node.id}>
               <Link to={edge.node.frontmatter.path}>
                 {edge.node.frontmatter.title}
@@ -48,7 +48,7 @@ const Sidebar: FunctionComponent<SidebarTypes> = ({ siteTitle }) => {
         </ul>
       </nav>
     </div>
-  )
-}
+  );
+};
 
-export default Sidebar
+export default Sidebar;

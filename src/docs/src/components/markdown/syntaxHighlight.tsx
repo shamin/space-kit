@@ -1,12 +1,12 @@
-import React, { FunctionComponent } from "react"
-import Highlight, { defaultProps } from "prism-react-renderer"
-import github from "prism-react-renderer/themes/github"
+import React, { FunctionComponent } from 'react';
+import Highlight, { defaultProps } from 'prism-react-renderer';
+import github from 'prism-react-renderer/themes/github';
 
 interface SyntaxHighlighterProps {
-  children: string
+  children: string;
 }
 
-const SyntaxHighlighter: FunctionComponent<SyntaxHighlighterProps> = props => (
+const SyntaxHighlighter: FunctionComponent<SyntaxHighlighterProps> = (props) => (
   <Highlight
     {...defaultProps}
     code={props.children.trim()}
@@ -25,6 +25,6 @@ const SyntaxHighlighter: FunctionComponent<SyntaxHighlighterProps> = props => (
       </div>
     )}
   </Highlight>
-)
+);
 
 export default SyntaxHighlighter;
