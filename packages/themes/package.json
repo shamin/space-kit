@@ -1,7 +1,7 @@
 {
-  "name": "@space-kit/core",
-  "version": "0.1.0-alpha.1",
-  "description": "Spacekit core",
+  "name": "@space-kit/themes",
+  "version": "0.1.0-alpha.0",
+  "description": "Spacekit themes",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
   "types": "dist/cjs/index.d.ts",
@@ -10,6 +10,7 @@
     "build:esm": "tsc --module esnext --outDir dist/esm",
     "build": "npm run build:cjs && npm run build:esm",
     "prepublish": "npm run build",
+    "test": "jest",
     "lint": "eslint src/**/*.ts* --max-warnings 0 --fix"
   },
   "keywords": [],
@@ -24,9 +25,17 @@
   },
   "homepage": "https://github.com/shamin/space-kit#readme",
   "devDependencies": {
+    "@types/react": "^16.9.52",
+    "eslint": "^7.11.0",
+    "jest": "^26.5.3",
     "lerna": "^3.22.1",
-    "typescript": "^4.0.3",
-    "eslint": "^7.11.0"
+    "typescript": "^4.0.3"
+  },
+  "dependencies": {
+    "@emotion/core": "^10.0.35",
+    "@space-kit/core": "^0.1.0-alpha.1",
+    "emotion-theming": "^10.0.27",
+    "react": "^16.13.1"
   },
   "files": [
     "dist/**/*"

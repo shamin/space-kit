@@ -3,3 +3,5 @@ package-lock.json
 
 src/docs/.cache
 src/docs/public
+
+**/dist/
