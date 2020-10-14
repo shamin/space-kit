@@ -1,0 +1,33 @@
+---
+path: "/components/themes/"
+title: "Themes"
+---
+
+## Themes
+
+---
+
+`@space-kit/themes` is a wrapper on top of emotion-theming. This can help you create your own custom themes of space-kit components. 
+
+### Installation
+
+```bash
+npm install --save @space-kit/themes
+```
+
+### Usage
+
+Add theme provider component to your file and using a space kit light theme.
+
+```jsx
+import React from 'react';
+import { ThemeProvider, lightTheme } from '@space-kit/themes';
+
+const MyComponent = () => {
+  return (
+    <ThemeProvider theme={lightTheme}>
+      <Button>Hello Button</Button>
+    </ThemeProvider>
+  );
+};
+```
