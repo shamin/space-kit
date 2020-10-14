@@ -1,7 +1,9 @@
 import { colors } from '@space-kit/core';
 
 interface Theme {
-  [key: string]: object;
+  colors: {
+    primary: string;
+  };
 }
 
 export const lightTheme: Theme = {
