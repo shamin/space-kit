@@ -1,13 +1,11 @@
-import { FunctionComponent, ReactNode, useEffect, useState } from 'react';
+import React, { ReactNode, useEffect, useState } from 'react';
 import { createPortal } from 'react-dom';
 
-type PortalProps = {
+interface PortalProps {
   children?: ReactNode;
-};
+}
 
-export const Portal: FunctionComponent<PortalProps> = ({
-  children,
-}: PortalProps) => {
+export const Portal: React.FC<PortalProps> = ({ children }: PortalProps) => {
   const [portalNode] = useState(document.createElement('div'));
 
   useEffect(() => {
