@@ -7,6 +7,7 @@
     "lerna:publish": "lerna publish from-package --yes",
     "build": "lerna run build",
     "lint": "lerna run lint",
+    "start": "lerna run watch --parallel",
     "test": "jest",
     "test:watch": "jest --watch"
   },

@@ -39,6 +39,7 @@
     "develop": "gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
     "start": "npm run develop",
+    "watch": "npm run develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "deploy": "npm run build && surge ./public/",

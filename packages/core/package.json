@@ -6,6 +6,7 @@
   "module": "dist/esm/index.js",
   "types": "dist/cjs/index.d.ts",
   "scripts": {
+    "watch": "tsc --module esnext --outDir dist/esm --watch",
     "build:cjs": "tsc --module commonjs --outDir dist/cjs",
     "build:esm": "tsc --module esnext --outDir dist/esm",
     "build": "npm run build:cjs && npm run build:esm",
