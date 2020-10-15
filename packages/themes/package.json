@@ -12,7 +12,7 @@
     "build": "npm run build:cjs && npm run build:esm",
     "prepublish": "npm run build",
     "test": "jest",
-    "lint": "eslint src/**/*.ts* --max-warnings 0 --fix"
+    "lint": "eslint 'src/**/*.ts*' --max-warnings 0 --fix"
   },
   "keywords": [],
   "author": "Shamin",

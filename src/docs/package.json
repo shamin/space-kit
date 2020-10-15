@@ -43,7 +43,7 @@
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "deploy": "npm run build && surge ./public/",
-    "lint": "eslint src/**/*.ts* --max-warnings 0 --fix"
+    "lint": "eslint 'src/**/*.ts*' --max-warnings 0 --fix"
   },
   "repository": {
     "type": "git",

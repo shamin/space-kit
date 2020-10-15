@@ -1,13 +1,16 @@
-import React from 'react';
+import React, { ReactNode } from 'react';
 import { MDXProvider } from '@mdx-js/react';
 import SyntaxHighligther from './syntaxHighlight';
-import { FunctionComponent } from 'react';
 
 const Components = {
   code: SyntaxHighligther,
 };
 
-const MDXStyler: FunctionComponent = (props) => (
+interface MDXStylerProps {
+  children: ReactNode;
+}
+
+const MDXStyler: React.FC<MDXStylerProps> = (props: MDXStylerProps) => (
   <MDXProvider components={Components}>{props.children}</MDXProvider>
 );
 
