@@ -3,27 +3,6 @@ path: "/components/portal/"
 title: "Portal"
 ---
 
-import Portal from "@space-kit/portal"
-import { graphql } from "gatsby"
-
-export const query = graphql`
-  query {
-    allComponentMetadata(filter: { displayName: { eq: "Portal" } }) {
-      edges {
-        node {
-          id
-          displayName
-          props {
-            id
-            name
-            tsType
-          }
-        }
-      }
-    }
-  }
-`
-
 ## Portal
 
 ---
@@ -48,24 +27,3 @@ const MyComponent = () => {
   return <Porta>Hello Portal</Porta>
 }
 ```
-
-### Props Table
-
-<table>
-  <thead>
-    <tr>
-      <th>Props</th>
-      <th>Type</th>
-    </tr>
-  </thead>
-  <tbody>
-    {props.data.allComponentMetadata.edges[0].node.props.map(
-      ({ name, tsType }) => (
-        <tr>
-          <td>{name}</td>
-          <td>{tsType.type || tsType.name}</td>
-        </tr>
-      )
-    )}
-  </tbody>
-</table>
