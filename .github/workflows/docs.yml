@@ -16,6 +16,11 @@ jobs:
           node-version: 12
       - run: npm ci
       - run: npm run bootstrap
+      - name: Run cypress end-to-end tests
+      - run: |
+          cd src/docs
+          npm run test:e2e:ci
+      - name: Deploy docs
       - run: |
           cd src/docs
           npm run deploy space-kit.surge.sh -- --token ${{ secrets.SURGE_TOKEN }}
