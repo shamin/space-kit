@@ -16,7 +16,6 @@ jobs:
       - run: npm run bootstrap
       - run: npm run lint
       - run: npm run test
-      - name: Run cypress end-to-end tests
       - run: |
         cd src/docs
         npm run test:e2e:ci
