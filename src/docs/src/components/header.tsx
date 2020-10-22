@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Header = () => (
-  <header>
+  <header role="banner">
     <div style={{ display: 'flex', justifyContent: 'flex-end', padding: '20px 0' }}>
       <p style={{ margin: 0 }}>
         <a

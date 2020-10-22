@@ -3,6 +3,7 @@ import { css, jsx } from '@emotion/core';
 
 const buttonStyle = css`
   background: rebeccapurple;
+  color: #fff;
 `;
 
 interface ButtonProps {
