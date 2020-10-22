@@ -18,4 +18,7 @@ jobs:
       - run: npm run bootstrap
       - run: |
           cd src/docs
+          npm run test:e2e:ci
+      - run: |
+          cd src/docs
           npm run deploy space-kit.surge.sh -- --token ${{ secrets.SURGE_TOKEN }}
