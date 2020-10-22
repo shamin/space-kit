@@ -14,8 +14,10 @@ jobs:
           node-version: 12
       - run: npm ci
       - run: npm run bootstrap
-      - run: npm run lint
-      - run: npm run test
+      - name: Running lint
+        run: npm run lint
+      - name: Running tests
+        run: npm run test
       - name: Running cypress e2e tests
         run: |
           cd src/docs
