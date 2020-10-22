@@ -26,9 +26,14 @@
     "react-helmet": "^6.1.0"
   },
   "devDependencies": {
+    "@testing-library/cypress": "^5.3.1",
     "@types/mdx-js__react": "^1.5.3",
     "@types/react-helmet": "^6.1.0",
+    "axe-core": "^4.0.2",
+    "cypress": "^5.4.0",
+    "cypress-axe": "^0.8.1",
     "prettier": "2.1.2",
+    "start-server-and-test": "^1.11.5",
     "surge": "^0.21.6"
   },
   "keywords": [
@@ -44,7 +49,11 @@
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "deploy": "npm run build && surge ./public/",
-    "lint": "eslint 'src/**/*.ts*' --max-warnings 0 --fix"
+    "lint": "eslint 'src/**/*.ts*' --max-warnings 0 --fix",
+    "cy:run": "cypress run",
+    "cy:open": "cypress open",
+    "test:e2e": "start-server-and-test develop http://localhost:8000 cy:open",
+    "test:e2e:ci": "start-server-and-test develop http://localhost:8000 cy:run"
   },
   "repository": {
     "type": "git",

@@ -23,7 +23,7 @@ const Sidebar: FunctionComponent<SidebarTypes> = ({ siteTitle }: SidebarTypes) =
   `);
 
   return (
-    <div className="sidebar">
+    <div className="sidebar" role="navigation" aria-label="sidebar">
       <div>
         <h1 className="logo">
           <Link

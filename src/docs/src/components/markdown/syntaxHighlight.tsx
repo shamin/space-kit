@@ -1,6 +1,6 @@
 import React, { FunctionComponent } from 'react';
 import Highlight, { defaultProps } from 'prism-react-renderer';
-import github from 'prism-react-renderer/themes/github';
+import github from 'prism-react-renderer/themes/oceanicNext';
 
 interface SyntaxHighlighterProps {
   children: string;
