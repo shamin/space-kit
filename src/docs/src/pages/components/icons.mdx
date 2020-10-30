@@ -1,10 +1,10 @@
 ---
-path: "/components/icons/"
-title: "Icons"
+path: '/components/icons/'
+title: 'Icons'
 ---
 
-import { AlignLeftIcon } from '@space-kit/icons';
-import { graphql } from "gatsby"
+import * as Icons from '@space-kit/icons';
+import { graphql } from 'gatsby';
 
 export const query = graphql`
   query {
@@ -22,7 +22,7 @@ export const query = graphql`
       }
     }
   }
-`
+`;
 
 ## Icons
 
@@ -43,12 +43,12 @@ npm install --save @space-kit/icons
 Add icons component to your file
 
 ```jsx
-import React from "react"
+import React from 'react';
 import { AlignLeftIcon } from '@space-kit/icons';
 
 const MyComponent = () => {
-  return <AlignLeftIcon size={16} />
-}
+  return <AlignLeftIcon size={16} />;
+};
 ```
 
 ### Props Table
@@ -61,13 +61,37 @@ const MyComponent = () => {
     </tr>
   </thead>
   <tbody>
-    {props.data.allComponentMetadata.edges[0].node.props.map(
-      ({ name, tsType }) => (
+    {props.data.allComponentMetadata.edges[0].node.props.map(({ name, tsType }) => (
+      <tr>
+        <td>{name}</td>
+        <td>{tsType.type || tsType.name}</td>
+      </tr>
+    ))}
+  </tbody>
+</table>
+
+## Available Icons
+
+All the icons are pulled from [Blueprint JS Icons](https://blueprintjs.com/docs/#icons)
+
+<table>
+  <thead>
+    <tr>
+      <th>Icon</th>
+      <th>IconComponent</th>
+    </tr>
+  </thead>
+  <tbody>
+    {Object.keys(Icons).map((icon) => {
+      const Component = Icons[icon];
+      return (
         <tr>
-          <td>{name}</td>
-          <td>{tsType.type || tsType.name}</td>
+          <td>
+            <Component size={16} />
+          </td>
+          <td>{icon}</td>
         </tr>
-      )
-    )}
+      );
+    })}
   </tbody>
 </table>
