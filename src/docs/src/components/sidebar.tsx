@@ -38,13 +38,18 @@ const Sidebar: FunctionComponent<SidebarTypes> = ({ siteTitle }: SidebarTypes) =
       </div>
       <nav>
         <ul>
-          {data.allMdx.edges.map((edge) => (
-            <li key={edge.node.id}>
-              <Link to={edge.node.frontmatter.path}>
-                {edge.node.frontmatter.title}
-              </Link>
-            </li>
-          ))}
+          {data.allMdx.edges
+            .filter((edge) => edge.node.frontmatter.path)
+            .map((edge) => (
+              <li key={edge.node.id} style={{ marginBottom: 10 }}>
+                <Link
+                  to={edge.node.frontmatter.path}
+                  style={{ textDecoration: 'none' }}
+                >
+                  {edge.node.frontmatter.title}
+                </Link>
+              </li>
+            ))}
         </ul>
       </nav>
     </div>

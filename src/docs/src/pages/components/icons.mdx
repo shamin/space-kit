@@ -1,0 +1,73 @@
+---
+path: "/components/icons/"
+title: "Icons"
+---
+
+import { AlignLeftIcon } from '@space-kit/icons';
+import { graphql } from "gatsby"
+
+export const query = graphql`
+  query {
+    allComponentMetadata(filter: { displayName: { eq: "Icon" } }) {
+      edges {
+        node {
+          id
+          displayName
+          props {
+            id
+            name
+            tsType
+          }
+        }
+      }
+    }
+  }
+`
+
+## Icons
+
+---
+
+<AlignLeftIcon size={16} />
+
+### Installation
+
+Install icons component from npm
+
+```bash
+npm install --save @space-kit/icons
+```
+
+### Usage
+
+Add icons component to your file
+
+```jsx
+import React from "react"
+import { AlignLeftIcon } from '@space-kit/icons';
+
+const MyComponent = () => {
+  return <AlignLeftIcon size={16} />
+}
+```
+
+### Props Table
+
+<table>
+  <thead>
+    <tr>
+      <th>Props</th>
+      <th>Type</th>
+    </tr>
+  </thead>
+  <tbody>
+    {props.data.allComponentMetadata.edges[0].node.props.map(
+      ({ name, tsType }) => (
+        <tr>
+          <td>{name}</td>
+          <td>{tsType.type || tsType.name}</td>
+        </tr>
+      )
+    )}
+  </tbody>
+</table>
