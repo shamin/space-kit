@@ -10,6 +10,7 @@
     "build:cjs": "tsc --module commonjs --outDir dist/cjs",
     "build:esm": "tsc --module esnext --outDir dist/esm",
     "build": "npm run build:cjs && npm run build:esm",
+    "prebuild": "npm run generate",
     "test": "jest",
     "generate": "tsc scripts/generate.ts --esModuleInterop --outDir scripts-dist/ && node scripts-dist/generate.js",
     "lint": "eslint 'src/**/*.ts*' --max-warnings 0 --fix"
