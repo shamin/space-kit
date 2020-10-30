@@ -10,7 +10,6 @@
     "build:cjs": "tsc --module commonjs --outDir dist/cjs",
     "build:esm": "tsc --module esnext --outDir dist/esm",
     "build": "npm run build:cjs && npm run build:esm",
-    "prepublish": "npm run build",
     "lint": "eslint 'src/**/*.ts*' --max-warnings 0 --fix"
   },
   "keywords": [],
