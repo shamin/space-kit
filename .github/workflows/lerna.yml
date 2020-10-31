@@ -13,9 +13,6 @@ jobs:
         with:
           node-version: 12
       - run: npm ci
-      - run: npm whoami
-        env:
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
       - run: npm run lerna:publish
         env:
           NPM_TOKEN: ${{secrets.NPM_TOKEN}}
