@@ -1,10 +1,8 @@
-name: Deploy Docs
+name: Main
 
 on:
   push:
     branches: [ main ]
-    paths: 
-      - "src/docs/**"
 
 jobs:
   build:
@@ -16,10 +14,13 @@ jobs:
           node-version: 12
       - run: npm ci
       - run: npm run bootstrap
-      - run: npm run build
-      - run: |
+      - name: Running lint
+        run: npm run lint
+      - name: Build packages
+        run: npm run build
+      - name: Running tests
+        run: npm run test
+      - name: Running cypress e2e tests
+        run: |
           cd src/docs
           npm run test:e2e:ci
-      - run: |
-          cd src/docs
-          npm run deploy space-kit.surge.sh -- --token ${{ secrets.SURGE_TOKEN }}
