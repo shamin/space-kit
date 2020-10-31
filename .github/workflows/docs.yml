@@ -16,6 +16,7 @@ jobs:
           node-version: 12
       - run: npm ci
       - run: npm run bootstrap
+      - run: npm run build
       - run: |
           cd src/docs
           npm run test:e2e:ci

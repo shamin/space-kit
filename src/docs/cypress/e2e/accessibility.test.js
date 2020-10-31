@@ -1,6 +1,6 @@
 /// <reference types="Cypress" />
 
-const pages = ['Button', 'Portal', 'Themes'];
+const pages = ['Button', 'Portal', 'Themes', 'Icons'];
 
 describe('Accessibility tests', () => {
   beforeEach(() => {

@@ -3,3 +3,8 @@
   <h1 align="center">Space Kit</h1>
 </p>
 <p align="center" style="font-size: 1.2rem;">Yet another component library for React</p>
+<p align="center" style="font-size: 1.2rem;">
+  <a href="#">
+    Documentation
+  </a>
+</p>
