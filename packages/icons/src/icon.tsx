@@ -9,7 +9,12 @@ interface IconProps {
 
 export const Icon: React.FC<IconProps> = ({ paths, name, size }: IconProps) => {
   return (
-    <svg style={{ fill: 'rebeccapurple' }} width={size} height={size} data-icon={name}>
+    <svg
+      style={{ fill: 'rebeccapurple' }}
+      width={size}
+      height={size}
+      data-icon={name}
+    >
       {paths.map((d, i) => (
         <path key={i} d={d} fillRule="evenodd" />
       ))}

@@ -40,7 +40,10 @@ const Sidebar: FunctionComponent<SidebarTypes> = ({ siteTitle }: SidebarTypes) =
       <div>
         <h1 className="logo">
           <Link to="/" css={logoStyles}>
-            🧑‍🎤 {siteTitle}
+            <span role="img" aria-label="logo">
+              🧑‍🎤
+            </span>
+            {siteTitle}
           </Link>
         </h1>
       </div>

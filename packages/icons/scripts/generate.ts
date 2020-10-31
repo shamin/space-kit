@@ -1,3 +1,4 @@
+/* eslint-disable quotes */
 /*
   This file is inspired from Evergreen by segmentio
   https://github.com/segmentio/evergreen/blob/master/tools/generate-icons.js
@@ -25,7 +26,6 @@ async function main() {
     iconNames.push(iconName);
 
     let iconFile = `
-    //** @jsx jsx */
     import React, { memo, forwardRef } from 'react';
     import { Icon } from '../Icon';
 
