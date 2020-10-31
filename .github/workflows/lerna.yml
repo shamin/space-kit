@@ -15,8 +15,6 @@ jobs:
           registry-url: https://registry.npmjs.org/
           scope: '@space-kit'
       - run: npm ci
-      - run: |
-          cd packages/button
-          npm publish
+      - run: npm run lerna:publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
