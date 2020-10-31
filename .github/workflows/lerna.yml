@@ -13,6 +13,8 @@ jobs:
         with:
           node-version: 12
       - run: npm ci
-      - run: npm run lerna:publish
+      - run: |
+          cd packages/portal
+          npm publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
