@@ -14,6 +14,16 @@ const navItemStyles = css`
   }
 `;
 
+interface MdxEdge {
+  node: {
+    id: string;
+    frontmatter: {
+      path: string;
+      title: string;
+    };
+  };
+}
+
 interface SidebarTypes {
   siteTitle: string;
 }
@@ -50,8 +60,8 @@ const Sidebar: FunctionComponent<SidebarTypes> = ({ siteTitle }: SidebarTypes) =
       <nav>
         <ul>
           {data.allMdx.edges
-            .filter((edge) => edge.node.frontmatter.path)
-            .map((edge) => (
+            .filter((edge: MdxEdge) => edge.node.frontmatter.path)
+            .map((edge: MdxEdge) => (
               <li key={edge.node.id} css={navItemStyles}>
                 <Link to={edge.node.frontmatter.path}>
                   {edge.node.frontmatter.title}
