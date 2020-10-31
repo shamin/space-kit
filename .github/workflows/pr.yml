@@ -16,6 +16,8 @@ jobs:
       - run: npm run bootstrap
       - name: Running lint
         run: npm run lint
+      - name: Build packages
+        run: npm run build
       - name: Running tests
         run: npm run test
       - name: Running cypress e2e tests
