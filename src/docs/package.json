@@ -5,6 +5,7 @@
   "version": "0.0.1",
   "author": "Shamin",
   "dependencies": {
+    "@emotion/core": "^10.0.35",
     "@mdx-js/mdx": "^1.6.18",
     "@mdx-js/react": "^1.6.18",
     "@space-kit/button": "0.1.0-alpha.2",
