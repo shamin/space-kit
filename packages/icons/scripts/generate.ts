@@ -27,7 +27,7 @@ async function main() {
 
     let iconFile = `
     import React, { memo, forwardRef } from 'react';
-    import { Icon } from '../Icon';
+    import { Icon } from '../icon';
 
     const svgPaths16 = [
       '${svgPaths16.join(`',\n  '`)}'
