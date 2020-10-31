@@ -1,6 +1,6 @@
 {
   "name": "@space-kit/icons",
-  "version": "0.1.0-alpha.0",
+  "version": "0.1.0-alpha.1",
   "description": "Spacekit icons component",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
