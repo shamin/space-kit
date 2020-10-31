@@ -4,7 +4,7 @@
   "scripts": {
     "lerna": "lerna",
     "bootstrap": "lerna bootstrap",
-    "lerna:publish": "lerna publish from-package --yes",
+    "lerna:publish": "lerna publish from-package --no-verify-access --yes",
     "build": "lerna run build",
     "lint": "lerna run lint",
     "start": "lerna run watch --parallel",
