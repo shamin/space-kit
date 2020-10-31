@@ -4,7 +4,11 @@
 </p>
 <p align="center" style="font-size: 1.2rem;">Yet another component library for React</p>
 <p align="center" style="font-size: 1.2rem;">
-  <a href="#">
+  <a href="https://space-kit.surge.sh">
     Documentation
   </a>
+</p>
+
+<p align="center">
+  <a href="https://github.com/shamin/space-kit/workflows/Main/badge.svg"><img src="https://github.com/shamin/space-kit/workflows/Main/badge.svg" alt="Build Status"></a>
 </p>
