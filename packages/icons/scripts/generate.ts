@@ -28,6 +28,7 @@ async function main() {
     let iconFile = `
     import React, { memo, forwardRef } from 'react';
     import { Icon } from '../icon';
+    import { colors } from '@space-kit/core';
 
     const svgPaths16 = [
       '${svgPaths16.join(`',\n  '`)}'
@@ -37,12 +38,13 @@ async function main() {
     ];
 
     interface IconProps {
-      size: number;
+      size: 16 | 20;
+      color: string;
     }
 
     export const ${iconName}: React.FC<IconProps> = memo(
-      forwardRef(({ size = 16 }: IconProps, ref) => (
-        <Icon size={size} paths={size === 16 ? svgPaths16 : svgPaths20} name="add-column-left" />
+      forwardRef(({ size = 16, color = colors.black }: IconProps, ref) => (
+        <Icon size={size} color={color} paths={size === 16 ? svgPaths16 : svgPaths20} name="add-column-left" />
       ))
     );
     `;
