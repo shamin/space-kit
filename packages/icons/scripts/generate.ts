@@ -38,8 +38,8 @@ async function main() {
     ];
 
     interface IconProps {
-      size: 16 | 20;
-      color: string;
+      size?: 16 | 20;
+      color?: string;
     }
 
     export const ${iconName}: React.FC<IconProps> = memo(
