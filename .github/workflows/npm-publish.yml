@@ -18,6 +18,8 @@ jobs:
       - run: npm ci
       - run: npm run bootstrap
       - run: npm run lint
+      - name: Build packages
+        run: npm run build
       - run: npm test
 
   publish-npm:
